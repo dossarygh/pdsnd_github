@@ -13,11 +13,11 @@ library(ggplot2)
 summary(chi)
 summary(ny)
 summary(wash)
-chSum = signif(sum(chi$Trip.Duration,na.rm=TRUE) / 3600,digits=2)
-nySum = signif(sum(ny$Trip.Duration,na.rm=TRUE) / 3600,digits=2)
-whSum = signif(sum(wash$Trip.Duration,na.rm=TRUE) / 3600,digits=2)
+chSum = signif(sum(chi$Trip.Duration,na.rm=TRUE) / 86400,digits=2)
+nySum = signif(sum(ny$Trip.Duration,na.rm=TRUE) / 86400,digits=2)
+whSum = signif(sum(wash$Trip.Duration,na.rm=TRUE) / 86400,digits=2)
 xdata <- data.frame("City" =  c ('Chicago','New York','Washington'), "Sum" = c (chSum , nySum , whSum ))
-ggplot(data = xdata, aes( City,Sum, fill=City)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(Sum, City, FUN = sum), label=ave(Sum, City, FUN = sum))) + labs (x='Name of Cities') + labs(y='Total of Travel Time (Hours)') + labs (title = 'Comparison of the total travel in three cities:') 
+ggplot(data = xdata, aes( City,Sum, fill=City)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(Sum, City, FUN = sum), label=ave(Sum, City, FUN = sum))) + labs (x='Name of Cities') + labs(y='Total of Travel Time (days)') + labs (title = 'Comparison of the total travel in three cities:') 
 xdata
 
 
