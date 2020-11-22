@@ -39,18 +39,18 @@ library (plyr)
 summary(chi)
 ChiUserType= count(subset(chi,User.Type!=''),vars='User.Type')
 ChiUserType
-ggplot(data = ChiUserType, aes( User.Type,freq, fill=User.Type)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(freq, User.Type, FUN = sum), label=ave(freq, User.Type, FUN = sum))) + ggtitle('Chicago') + labs (x='User Type') + labs(y='Total Count') + labs (title = 'Comparison of the count for each user type in Chicago:')
+ggplot(data = ChiUserType, aes( User.Type,freq, fill=User.Type)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(freq, User.Type, FUN = sum), label=ave(freq, User.Type, FUN = sum))) + ggtitle('Chicago') + labs (x='User Type') + labs(y='Total Count') + labs (title = 'the count for each user type in Chicago:')
 
 library (plyr)
 summary(ny)
 nyUserType= count(subset(ny,User.Type!=''),vars='User.Type')
 nyUserType
-ggplot(data = nyUserType, aes( User.Type,freq, fill=User.Type)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(freq, User.Type, FUN = sum), label=ave(freq, User.Type, FUN = sum))) + ggtitle('New York City') + labs (x='User Type') + labs(y='Total Count') + labs (title = 'Comparison of the count for each user type in New York City:')
+ggplot(data = nyUserType, aes( User.Type,freq, fill=User.Type)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(freq, User.Type, FUN = sum), label=ave(freq, User.Type, FUN = sum))) + ggtitle('New York City') + labs (x='User Type') + labs(y='Total Count') + labs (title = 'the count for each user type in New York City:')
 
 library (plyr)
 summary(wash)
 washUserType= count(subset(wash,User.Type!=''),vars='User.Type')
 washUserType
-ggplot(data = washUserType, aes( User.Type,freq, fill=User.Type)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(freq, User.Type, FUN = sum), label=ave(freq, User.Type, FUN = sum))) + ggtitle('Washington City') + labs (x='User Type') + labs(y='Total Count') + labs (title = 'Comparison of the count for each user type in Washington City:')
+ggplot(data = washUserType, aes( User.Type,freq, fill=User.Type)) + geom_bar(stat="identity") +   geom_text(aes(y =ave(freq, User.Type, FUN = sum), label=ave(freq, User.Type, FUN = sum))) + ggtitle('Washington City') + labs (x='User Type') + labs(y='Total Count') + labs (title = 'the count for each user type in Washington City:')
 
 system('python -m nbconvert Explore_bikeshare_data.ipynb')
