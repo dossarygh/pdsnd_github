@@ -5,7 +5,7 @@
 Programming for Data Science with R
 
 ### Description
-Using git commands to execute the project
+Using git commands to execute the final project
 
 ### Files used
 three files Explore_bikeshare_data, .gitignore 
