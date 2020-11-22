@@ -1,14 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+22nd Nov 2020
 
 ### Project Title
-Replace the Project Title
+Programming for Data Science with R
 
 ### Description
-Describe what your project is about and what it does
+Using git commands
 
 ### Files used
-Include the files used
+three files Explore_bikeshare_data, .gitignore 
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
